@@ -18,10 +18,10 @@
    15. Responsivo (mobile)
    16. Menu mobile
 ════════════════════════════════════════════ */
- 
+
 /* ─── 1. RESET & VARIÁVEIS ─── */
 *,*::before,*::after { margin:0; padding:0; box-sizing:border-box }
- 
+
 :root {
   --verde:         #1b4332;
   --verde-m:       #2d6a4f;
@@ -41,7 +41,7 @@
   --radius:        3px;
   --radius-lg:     6px;
 }
- 
+
 html { scroll-behavior: smooth }
 body {
   font-family: 'DM Sans', sans-serif;
@@ -49,12 +49,12 @@ body {
   color: var(--texto);
   overflow-x: hidden;
 }
- 
+
 /* ─── 2. SCROLLBAR ─── */
 ::-webkit-scrollbar { width: 5px }
 ::-webkit-scrollbar-track { background: var(--verde) }
 ::-webkit-scrollbar-thumb { background: var(--amarelo); border-radius: 10px }
- 
+
 /* ─── 3. NAVEGAÇÃO ─── */
 #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
@@ -101,7 +101,7 @@ body {
   display: block; width: 24px; height: 2px;
   background: var(--amarelo); transition: all 0.3s; border-radius: 2px;
 }
- 
+
 /* ─── 4. HERO ─── */
 .hero {
   min-height: 100vh;
@@ -199,7 +199,7 @@ body {
 /* foto mobile — escondida no desktop */
 .hero-foto-mobile { display: none; flex-shrink: 0 }
 .hero-foto-mobile img { width: 130px; height: 130px; object-fit: contain; object-position: center }
- 
+
 /* ─── 5. TICKER ─── */
 .ticker { background: var(--amarelo); overflow: hidden; height: 44px; display: flex; align-items: center }
 .ticker-inner { display: flex; white-space: nowrap; animation: tickerScroll 28s linear infinite }
@@ -210,7 +210,7 @@ body {
   display: flex; align-items: center; gap: 0.8rem; flex-shrink: 0;
 }
 .ticker-sep { color: var(--verde); font-size: 1.2rem }
- 
+
 /* ─── 6. SECÇÕES GENÉRICAS ─── */
 section { padding: 90px 5% }
 .container { max-width: 1200px; margin: 0 auto }
@@ -228,7 +228,7 @@ section { padding: 90px 5% }
 .sec-title em  { font-style: italic; color: var(--marrom-claro) }
 .sec-title.light { color: var(--creme) }
 .sec-title.light em { color: var(--amarelo) }
- 
+
 /* ─── 7. SOBRE ─── */
 .sobre { background: var(--creme) }
 .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start }
@@ -258,7 +258,7 @@ section { padding: 90px 5% }
 .pill   { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.42rem 0.9rem; border-radius: 100px; background: var(--verde); color: var(--amarelo) }
 .pill.r { background: var(--vermelho); color: #fff }
 .pill.o { background: var(--marrom); color: var(--creme-escuro) }
- 
+
 /* ─── 8. CARDÁPIO ─── */
 .cardapio { background: var(--preto); position: relative; overflow: hidden }
 .cardapio-bg {
@@ -305,7 +305,7 @@ section { padding: 90px 5% }
 .mitem h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 700; color: var(--creme); line-height: 1.3; flex: 1 }
 .mprice   { font-size: 1rem; font-weight: 700; color: var(--amarelo); white-space: nowrap; font-family: 'DM Sans', sans-serif }
 .mitem p  { font-size: 0.82rem; line-height: 1.65; color: rgba(255,255,255,0.45) }
- 
+
 /* ─── 9. AMBIENTE ─── */
 .ambiente { background: var(--creme-escuro) }
 .amb-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem }
@@ -333,7 +333,7 @@ section { padding: 90px 5% }
   background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px);
   background-size: 18px 18px;
 }
- 
+
 /* ─── 10. DEPOIMENTOS ─── */
 .depos { background: var(--marrom) }
 .depos .sec-tag { color: var(--amarelo-claro) }
@@ -352,7 +352,7 @@ section { padding: 90px 5% }
 .dep-av    { width: 38px; height: 38px; border-radius: 50%; background: var(--amarelo); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 0.9rem; color: var(--verde); flex-shrink: 0 }
 .dep-nome  { font-size: 0.85rem; font-weight: 700; color: var(--creme) }
 .dep-plat  { font-size: 0.72rem; color: rgba(255,255,255,0.35) }
- 
+
 /* ─── 11. RESERVA ─── */
 .reserva { background: var(--creme) }
 .reserva-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start }
@@ -394,7 +394,7 @@ section { padding: 90px 5% }
 }
 .btn-submit:hover { background: var(--amarelo-claro); transform: translateY(-1px) }
 .btn-submit.done { background: var(--verde-claro); color: #fff }
- 
+
 /* ─── 12. DELIVERY ─── */
 .delivery { background: var(--preto); position: relative; overflow: hidden }
 .delivery::before {
@@ -442,7 +442,7 @@ section { padding: 90px 5% }
 .dlv-bolt  .dlv-btn:hover { background: #2aad48 }
 .dlv-glovo .dlv-btn:hover { background: #e6b000 }
 .dlv-badge { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); padding: 0.25rem 0.7rem; border-radius: 100px }
- 
+
 /* ─── 13. FOOTER ─── */
 footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) }
 .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; padding: 60px 5% 40px; max-width: 1200px; margin: 0 auto }
@@ -457,7 +457,7 @@ footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) 
 .footer-maps { color: var(--amarelo) !important; margin-top: 0.5rem }
 .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 0.5rem }
 .footer-bottom p { font-size: 0.72rem; color: rgba(255,255,255,0.2) }
- 
+
 /* ─── 14. ANIMAÇÕES ─── */
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease }
 .reveal.d1 { transition-delay: 0.1s }
@@ -465,7 +465,7 @@ footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) 
 .reveal.d3 { transition-delay: 0.3s }
 .reveal.d4 { transition-delay: 0.4s }
 .reveal.in { opacity: 1; transform: none }
- 
+
 /* ─── 15. RESPONSIVO ─── */
 @media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; gap: 3rem }
@@ -498,8 +498,8 @@ footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) 
   .hero-ctas   { flex-direction: column }
   .hero-badges { gap: 0.5rem }
 }
- 
- 
+
+
 /* ─── MAPA ─── */
 .mapa-wrapper {
   margin-top: 2rem;
@@ -530,7 +530,7 @@ footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) 
   transition: background 0.2s;
 }
 .mapa-link:hover { background: var(--verde-m) }
- 
+
 /* ─── 16. MENU MOBILE ─── */
 .mobile-menu { display: none; position: fixed; inset: 0; z-index: 199; background: rgba(15,10,5,0.98); flex-direction: column; align-items: center; justify-content: center; gap: 2rem }
 .mobile-menu.open { display: flex }
@@ -538,19 +538,23 @@ footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) 
 .mobile-menu a:hover { color: var(--amarelo) }
 .mobile-close { position: absolute; top: 1.5rem; right: 5%; background: none; border: none; cursor: pointer; font-size: 1.8rem; color: rgba(255,255,255,0.5); transition: color 0.2s }
 .mobile-close:hover { color: var(--amarelo) }
- 
+
 /* ─── LOCALIZAÇÃO ─── */
-.localizacao { background: var(--verde); position: relative; overflow: hidden }
+.localizacao { background: var(--amarelo); position: relative; overflow: hidden }
 .localizacao::before {
   content: ''; position: absolute;
   width: 500px; height: 500px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(244,169,10,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
   top: -150px; right: -100px; pointer-events: none;
 }
 .localizacao .container { position: relative; z-index: 1 }
-.localizacao .sec-tag { color: var(--amarelo-claro) }
-.localizacao .sec-tag::before { background: var(--amarelo-claro) }
- 
+.localizacao .sec-tag { color: var(--verde) }
+.localizacao .sec-tag::before { background: var(--verde) }
+
+/* título da secção localização — texto escuro sobre fundo amarelo */
+.localizacao .sec-title { color: var(--verde) }
+.localizacao .sec-title em { color: var(--marrom) }
+
 .loc-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -558,14 +562,14 @@ footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) 
   margin-top: 2.5rem;
   align-items: start;
 }
- 
+
 /* coluna de informações */
 .loc-info { display: flex; flex-direction: column; gap: 1.5rem }
 .loc-item { display: flex; align-items: flex-start; gap: 1rem }
 .loc-icon {
   font-size: 1.4rem;
   width: 44px; height: 44px;
-  background: rgba(255,255,255,0.07);
+  background: rgba(0,0,0,0.12);   /* fundo escuro sobre amarelo */
   border-radius: var(--radius-lg);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -573,30 +577,32 @@ footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) 
 .loc-label {
   font-size: 0.65rem; font-weight: 700;
   letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--amarelo); margin-bottom: 0.3rem;
+  color: var(--verde);             /* verde escuro — bom contraste no amarelo */
+  margin-bottom: 0.3rem;
 }
 .loc-value {
   font-size: 0.88rem; line-height: 1.6;
-  color: rgba(255,255,255,0.7);
+  color: var(--texto);             /* castanho escuro — legível no amarelo */
 }
 .loc-btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  margin-top: 0.5rem;
-  background: var(--amarelo); color: var(--verde);
+  margin-top: 1rem;
+  background: var(--verde);        /* botão verde */
+  color: var(--amarelo);           /* texto amarelo no botão */
   font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.12em; text-transform: uppercase;
   padding: 0.9rem 1.8rem; border-radius: var(--radius);
   text-decoration: none; transition: all 0.25s;
   align-self: flex-start;
 }
-.loc-btn:hover { background: var(--amarelo-claro); transform: translateY(-2px) }
- 
+.loc-btn:hover { background: var(--verde-m); transform: translateY(-2px) }
+
 /* mapa */
 .loc-mapa {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  border: 2px solid rgba(0,0,0,0.15);  /* borda discreta no fundo amarelo */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 .loc-mapa iframe {
   width: 100%;
@@ -604,9 +610,17 @@ footer { background: var(--preto); border-top: 1px solid rgba(255,255,255,0.05) 
   display: block;
   border: none;
 }
- 
+
 /* mobile */
 @media (max-width: 768px) {
-  .loc-grid { grid-template-columns: 1fr }
+  /* título da secção localização — texto escuro sobre fundo amarelo */
+.localizacao .sec-title { color: var(--verde) }
+.localizacao .sec-title em { color: var(--marrom) }
+
+.loc-grid { grid-template-columns: 1fr }
   .loc-mapa iframe { height: 280px }
 }
+
+/* sobre com apenas 2 cards — ficam lado a lado centrados */
+.sobre-cards-2 { grid-template-columns: 1fr 1fr; max-width: 480px }
+@media (max-width: 480px) { .sobre-cards-2 { grid-template-columns: 1fr; max-width: 100% } }
