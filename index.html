@@ -7,10 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;700&family=Abril+Fatface&display=swap" rel="stylesheet">
+ 
+<!-- Ficheiro CSS separado -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav id="nav">
   <a href="#home" class="nav-logo">Maria Bonita</a>
@@ -20,13 +22,14 @@
     <li><a href="#ambiente">Ambiente</a></li>
     <li><a href="#reserva">Reservas</a></li>
     <li><a href="#delivery">Delivery</a></li>
+    <li><a href="#localizacao">Localização</a></li>
   </ul>
   <a href="#reserva" class="nav-cta">Reservar Mesa</a>
   <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
-
+ 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="toggleMenu()">✕</button>
@@ -35,8 +38,9 @@
   <a href="#ambiente" onclick="toggleMenu()">Ambiente</a>
   <a href="#reserva" onclick="toggleMenu()">Reservas</a>
   <a href="#delivery" onclick="toggleMenu()">Delivery</a>
-  </div>
-
+  <a href="#localizacao" onclick="toggleMenu()">Localização</a>
+</div>
+ 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-foto-bg"></div>
@@ -50,20 +54,16 @@
         <span class="hero-eyebrow-text">Porto, Portugal</span>
         <span class="hero-flag">🇧🇷</span>
       </div>
-      <!-- No mobile: título e foto lado a lado numa linha -->
       <div class="hero-titulo-row">
         <h1 class="hero-title">
           Maria
           <span>Bonita</span>
         </h1>
-        <!-- Foto ao lado do título — só aparece no mobile -->
         <div class="hero-foto-mobile">
           <img src="Logo2.png" alt="Maria Bonita">
         </div>
       </div>
-
       <p class="hero-botequim">Botequim Brasileiro</p>
-
       <p class="hero-desc">
         Seu bar brasileiro no Porto! Comida e petiscos, cerveja gelada,
         música ao vivo e gente animada. Um pedaço da alma carioca no coração da Baixa Portuense.
@@ -79,25 +79,18 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:1.2rem;text-align:center;">
-        <!-- FOTO -->
-        <img src="logo.png"
-             alt="Maria Bonita Botequim"
-             style="width:420px;max-width:90%;height:300px;object-fit:cover;object-position:center;">
-        <!-- ENDEREÇO -->
-        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);">
-          Rua de Santo Ildefonso · Porto
-        </div>
-        <!-- ESTRELAS -->
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
-          <div style="color:#f4a90a;font-size:0.85rem;letter-spacing:2px;">★★★★☆</div>
-          <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;">4.4 · Centenas de avaliações</div>
+      <div class="hero-visual-inner">
+        <img src="logo.png" alt="Maria Bonita Botequim" class="hero-visual-img">
+        <div class="hero-visual-address">Rua de Santo Ildefonso · Porto</div>
+        <div class="hero-visual-stars">
+          <div class="hero-visual-star-row">★★★★☆</div>
+          <div class="hero-visual-rating">4.4 · Centenas de avaliações</div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- TICKER -->
 <div class="ticker" aria-label="Destaques">
   <div class="ticker-inner">
@@ -115,7 +108,7 @@
     <span class="ticker-item"><span>🍺</span> Chopp Viva bem gelado sempre disponível <span class="ticker-sep">✦</span></span>
   </div>
 </div>
-
+ 
 <!-- SOBRE -->
 <section class="sobre" id="sobre">
   <div class="container">
@@ -146,7 +139,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- CARDÁPIO -->
 <section class="cardapio" id="cardapio">
   <div class="cardapio-bg"></div>
@@ -164,7 +157,7 @@
     <div class="msec on" id="petiscos">
       <div class="menu-grid">
         <div class="mitem"><span class="mbadge mb-hot">🔥 Mais Pedido</span><div class="mitem-header"><h3>Coxinha de Frango Tradicional</h3><span class="mprice">€ 6,50</span></div><p>Clássica coxinha com massa artesanal de batata ultra cremosa, recheada com frango desfiado temperado com ervas, frita na hora até dourar. Porção com 4 unidades.</p></div>
-        <div class="mitem"><span class="mbadge mb-hot">🔥 Destaque da Casa</span><div class="mitem-header"><h3>Bolinho de Feijoada</h3><span class="mprice">€ 7,50</span></div><p>Massa especial de feijoada de raiz, recheada com couve mineira refogada no alho e bacon defumado. Acompanha gomos de laranja frescas e pimenta da casa. 4 unidades.</p></div>
+        <div class="mitem"><span class="mbadge mb-hot">🔥 Destaque da Casa</span><div class="mitem-header"><h3>Bolinho de Feijoada</h3><span class="mprice">€ 7,50</span></div><p>Massa especial de feijoada de raiz, recheada com couve mineira refogada no alho e bacon defumado. Acompanha gomos de laranja fresca e pimenta da casa. 4 unidades.</p></div>
         <div class="mitem"><div class="mitem-header"><h3>Pastéis de Vento Recheados</h3><span class="mprice">€ 6,00</span></div><p>Pastéis fritos na hora com massa crocante de feira. Escolha e misture: Carne moída com ovo, Queijo derretido ou Palmito cremoso. 3 unidades.</p></div>
         <div class="mitem"><span class="mbadge mb-veg">🌿 Vegetariano</span><div class="mitem-header"><h3>Dadinhos de Tapioca</h3><span class="mprice">€ 6,80</span></div><p>Cubos dourados de tapioca granulada e queijo coalho, fritos e servidos com geleia de pimenta agridoce caseira irresistível. 6 unidades.</p></div>
         <div class="mitem"><span class="mbadge mb-veg">🌿 Vegetariano</span><div class="mitem-header"><h3>Mandioca Frita Polvilhada</h3><span class="mprice">€ 5,50</span></div><p>Porção generosa de aipim cozido e frito, crocante por fora e macio por dentro, finalizado com queijo parmesão ralado fino.</p></div>
@@ -195,10 +188,11 @@
         <div class="mitem"><span class="mbadge mb-new">🇧🇷 Original</span><div class="mitem-header"><h3>Guaraná Antarctica (Lata)</h3><span class="mprice">€ 2,50</span></div><p>O autêntico refrigerante de fruta da Amazônia brasileira, trincando de gelado com rodela de limão.</p></div>
         <div class="mitem"><span class="mbadge mb-veg">🌿 Natural</span><div class="mitem-header"><h3>Suco de Polpa Brasileira</h3><span class="mprice">€ 3,50</span></div><p>Batido na hora com água ou leite. Sabores: Caju, Acerola rica em vitamina C ou Maracujá concentrado.</p></div>
       </div>
-    <p style="font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:1.5rem;font-style:italic;">* Preços podem sofrer pequenas variações em plataformas de delivery externo ou atualizações sazonais.</p>
+    </div>
+    <p class="cardapio-nota">* Preços podem sofrer pequenas variações em plataformas de delivery externo ou atualizações sazonais.</p>
   </div>
 </section>
-
+ 
 <!-- AMBIENTE -->
 <section class="ambiente" id="ambiente">
   <div class="container">
@@ -207,15 +201,15 @@
       <p class="amb-desc reveal d1">Decoração colorida, vibrante e tropical com referências ao cangaço e à cultura popular brasileira. Iluminação quente e intimista, mesas de madeira que estimulam a confraternização e um palco integrado ao salão para as apresentações de música ao vivo.</p>
     </div>
     <div class="amb-grid">
-      <div class="amb-card tall reveal"><div class="amb-bg bg1"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:4rem;opacity:0.2">🎵</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Salão Principal</h4><p>Palco de música integrado · Ambiente boêmio</p></div></div>
-      <div class="amb-card reveal d1"><div class="amb-bg bg2" style="height:220px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2">🍹</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Bar e Balcão</h4><p>Caipirinhas e chopes sempre gelados</p></div></div>
-      <div class="amb-card reveal d2"><div class="amb-bg bg3" style="height:220px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2">🌶️</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Decoração Cangaço</h4><p>Arte popular e referências culturais</p></div></div>
-      <div class="amb-card reveal d1"><div class="amb-bg bg4" style="height:220px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2">🥘</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Área de Feijoada</h4><p>Fins de semana com feijoada completa</p></div></div>
-      <div class="amb-card wide reveal d2"><div class="amb-bg bg5" style="height:220px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:4rem;opacity:0.2">🎉</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Espaço para Eventos e Aniversários</h4><p>Reserve para grupos · Festas temáticas · Carnaval · São João · Réveillon</p></div></div>
+      <div class="amb-card tall reveal"><div class="amb-bg bg1"><div class="amb-emoji">🎵</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Salão Principal</h4><p>Palco de música integrado · Ambiente boêmio</p></div></div>
+      <div class="amb-card reveal d1"><div class="amb-bg bg2" style="height:220px"><div class="amb-emoji">🍹</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Bar e Balcão</h4><p>Caipirinhas e chopes sempre gelados</p></div></div>
+      <div class="amb-card reveal d2"><div class="amb-bg bg3" style="height:220px"><div class="amb-emoji">🌶️</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Decoração Cangaço</h4><p>Arte popular e referências culturais</p></div></div>
+      <div class="amb-card reveal d1"><div class="amb-bg bg4" style="height:220px"><div class="amb-emoji">🥘</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Área de Feijoada</h4><p>Fins de semana com feijoada completa</p></div></div>
+      <div class="amb-card wide reveal d2"><div class="amb-bg bg5" style="height:220px"><div class="amb-emoji">🎉</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Espaço para Eventos e Aniversários</h4><p>Reserve para grupos · Festas temáticas · Carnaval · São João · Réveillon</p></div></div>
     </div>
   </div>
 </section>
-
+ 
 <!-- DEPOIMENTOS -->
 <section class="depos" id="depoimentos">
   <div class="container">
@@ -230,7 +224,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- RESERVA -->
 <section class="reserva" id="reserva">
   <div class="container">
@@ -250,78 +244,44 @@
           <div class="ht-row"><span class="ht-dia">Terça</span><span class="ht-fechado">Fechado</span></div>
           <div class="ht-row"><span class="ht-dia">Quarta</span><span class="ht-hora">12h00–15h00 · 19h00–00h00</span></div>
           <div class="ht-row"><span class="ht-dia">Quinta</span><span class="ht-hora">12h00–15h00 · 19h00–00h00</span></div>
-          <div class="ht-row"><span class="ht-dia">Sexta</span><span class="ht-hora" style="color:var(--vermelho);font-weight:700">12h00–02h00 🎵</span></div>
-          <div class="ht-row"><span class="ht-dia">Sábado</span><span class="ht-hora" style="color:var(--verde);font-weight:700">12h00–02h00 🥘</span></div>
+          <div class="ht-row"><span class="ht-dia">Sexta</span><span class="ht-hora ht-musica">12h00–02h00 🎵</span></div>
+          <div class="ht-row"><span class="ht-dia">Sábado</span><span class="ht-hora ht-feijoada">12h00–02h00 🥘</span></div>
           <div class="ht-row"><span class="ht-dia">Domingo</span><span class="ht-hora">12h00–02h00</span></div>
         </div>
         <p class="ht-nota">🎵 Noite boêmia · 🥘 Feijoada desde o almoço · Reserve com antecedência nos fins de semana</p>
+ 
       </div>
-
-      <!-- ═══ FORMULÁRIO COM WHATSAPP ═══
-           Cada campo tem um id único (f-nome, f-tel, etc.)
-           O JavaScript lê esses ids para montar a mensagem -->
       <div class="reserva-form reveal d1">
         <div class="rf-title">Reservar Mesa</div>
         <p class="rf-sub">Ao enviar, abrimos o WhatsApp com os seus dados já preenchidos.</p>
-
-        <div class="fg">
-          <label>Nome completo</label>
-          <input id="f-nome" type="text" placeholder="O seu nome">
+        <div class="fg"><label>Nome completo</label><input id="f-nome" type="text" placeholder="O seu nome"></div>
+        <div class="frow">
+          <div class="fg"><label>Telefone / WhatsApp</label><input id="f-tel" type="tel" placeholder="+351 000 000 000"></div>
+          <div class="fg"><label>E-mail</label><input id="f-email" type="email" placeholder="seu@email.com"></div>
         </div>
         <div class="frow">
-          <div class="fg">
-            <label>Telefone / WhatsApp</label>
-            <input id="f-tel" type="tel" placeholder="+351 000 000 000">
-          </div>
-          <div class="fg">
-            <label>E-mail</label>
-            <input id="f-email" type="email" placeholder="seu@email.com">
-          </div>
-        </div>
-        <div class="frow">
-          <div class="fg">
-            <label>Data</label>
-            <input id="f-data" type="date">
-          </div>
-          <div class="fg">
-            <label>Horário</label>
+          <div class="fg"><label>Data</label><input id="f-data" type="date"></div>
+          <div class="fg"><label>Horário</label>
             <select id="f-hora">
-              <option>12h00 (Almoço)</option>
-              <option>13h00</option>
-              <option>14h00</option>
-              <option>19h00</option>
-              <option>20h00</option>
-              <option>21h00</option>
-              <option>22h00</option>
+              <option>12h00 (Almoço)</option><option>13h00</option><option>14h00</option>
+              <option>19h00</option><option>20h00</option><option>21h00</option><option>22h00</option>
             </select>
           </div>
         </div>
-        <div class="fg">
-          <label>Número de pessoas</label>
+        <div class="fg"><label>Número de pessoas</label>
           <select id="f-pessoas">
-            <option>1–2 pessoas</option>
-            <option>3–4 pessoas</option>
-            <option>5–6 pessoas</option>
-            <option>7–10 pessoas</option>
-            <option>Mais de 10 (evento / aniversário)</option>
+            <option>1–2 pessoas</option><option>3–4 pessoas</option><option>5–6 pessoas</option>
+            <option>7–10 pessoas</option><option>Mais de 10 (evento / aniversário)</option>
           </select>
         </div>
-        <div class="fg">
-          <label>Ocasião especial?</label>
-          <input id="f-ocasiao" type="text" placeholder="Aniversário, evento corporativo... (opcional)">
-        </div>
-        <div class="fg">
-          <label>Observações</label>
-          <textarea id="f-obs" placeholder="Alergias, preferências ou pedidos especiais..."></textarea>
-        </div>
-        <button class="btn-submit" id="submitBtn" onclick="handleSubmit()">
-          💬 Enviar via WhatsApp
-        </button>
+        <div class="fg"><label>Ocasião especial?</label><input id="f-ocasiao" type="text" placeholder="Aniversário, evento corporativo... (opcional)"></div>
+        <div class="fg"><label>Observações</label><textarea id="f-obs" placeholder="Alergias, preferências ou pedidos especiais..."></textarea></div>
+        <button class="btn-submit" id="submitBtn" onclick="handleSubmit()">💬 Enviar Reserva via WhatsApp</button>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- DELIVERY -->
 <section class="delivery" id="delivery">
   <div class="container">
@@ -330,46 +290,97 @@
       <h2 class="sec-title light">Peça em <em>casa</em></h2>
     </div>
     <p class="delivery-desc reveal">
-      Não consegues vir até nós? Tudo bem — levamos o sabor do Maria Bonita até à tua porta! 
+      Não consegues vir até nós? Tudo bem — levamos o sabor do Maria Bonita até à tua porta!
       Escolhe a tua plataforma favorita e faz o teu pedido agora.
     </p>
     <div class="delivery-cards">
-
-      <!-- UBER EATS -->
-      <a class="dlv-card dlv-uber reveal"
-         href="https://www.ubereats.com/store/maria-bonita-botequim/L1rHTmhaRGGVQzI5jn0BQQ?diningMode=DELIVERY"
-         target="_blank" rel="noopener">
+      <a class="dlv-card dlv-uber reveal" href="https://www.ubereats.com/store/maria-bonita-botequim/L1rHTmhaRGGVQzI5jn0BQQ?diningMode=DELIVERY" target="_blank" rel="noopener">
         <div class="dlv-badge">Disponível agora</div>
         <div class="dlv-logo">Uber Eats</div>
         <p class="dlv-desc">Entrega rápida e rastreável em tempo real directo à tua porta</p>
         <span class="dlv-btn">Pedir no Uber Eats</span>
       </a>
-
-      <!-- BOLT FOOD -->
-      <a class="dlv-card dlv-bolt reveal d1"
-         href="https://food.bolt.eu/en-US/437/p/116768-maria-bonita-botequim"
-         target="_blank" rel="noopener">
+      <a class="dlv-card dlv-bolt reveal d1" href="https://food.bolt.eu/en-US/437/p/116768-maria-bonita-botequim" target="_blank" rel="noopener">
         <div class="dlv-badge">Disponível agora</div>
         <div class="dlv-logo">Bolt Food</div>
         <p class="dlv-desc">Entrega acessível e rápida com as melhores promoções da cidade</p>
         <span class="dlv-btn">Pedir no Bolt Food</span>
       </a>
-
-      <!-- GLOVO -->
-      <a class="dlv-card dlv-glovo reveal d2"
-         href="https://ufv9.adj.st/?adjust_deeplink=glovoapp%3A%2F%2Fopen%3Flink_type%3Dstore%26store_id%3D531650&adjust_t=s321jkn"
-         target="_blank" rel="noopener">
+      <a class="dlv-card dlv-glovo reveal d2" href="https://ufv9.adj.st/?adjust_deeplink=glovoapp%3A%2F%2Fopen%3Flink_type%3Dstore%26store_id%3D531650&adjust_t=s321jkn" target="_blank" rel="noopener">
         <div class="dlv-badge">Disponível agora</div>
         <div class="dlv-logo">Glovo</div>
         <p class="dlv-desc">Entrega expressa com rastreamento em directo no teu telemóvel</p>
         <span class="dlv-btn">Pedir no Glovo</span>
       </a>
-
     </div>
   </div>
 </section>
-
-
+ 
+<!-- LOCALIZAÇÃO -->
+<section class="localizacao" id="localizacao">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-tag">Onde Estamos</div>
+      <h2 class="sec-title light">Como <em>chegar até nós</em></h2>
+    </div>
+    <div class="loc-grid">
+ 
+      <!-- INFO -->
+      <div class="loc-info reveal">
+        <div class="loc-item">
+          <div class="loc-icon">📍</div>
+          <div>
+            <div class="loc-label">Morada</div>
+            <div class="loc-value">Rua de Santo Ildefonso, 244</div>
+            <div class="loc-value">4000-508 Porto, Portugal</div>
+          </div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon">🚇</div>
+          <div>
+            <div class="loc-label">Transportes</div>
+            <div class="loc-value">Metro: Bolhão (Linha D)</div>
+            <div class="loc-value">Autocarros: 200, 201, 203</div>
+          </div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon">🅿️</div>
+          <div>
+            <div class="loc-label">Estacionamento</div>
+            <div class="loc-value">Estacionamento rotativo nas ruas próximas</div>
+            <div class="loc-value">Parque Bolhão a 5 min a pé</div>
+          </div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon">🕐</div>
+          <div>
+            <div class="loc-label">Horários</div>
+            <div class="loc-value">Qua–Qui: 12h–15h / 19h–00h</div>
+            <div class="loc-value">Sex: 12h–02h · Sáb–Dom: 12h–02h</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Rua+de+Santo+Ildefonso+244+Porto"
+           target="_blank" class="loc-btn">
+          📍 Abrir no Google Maps
+        </a>
+      </div>
+ 
+      <!-- MAPA -->
+      <div class="loc-mapa reveal d1">
+        <iframe
+          src="https://maps.google.com/maps?q=Rua+de+Santo+Ildefonso+244,+4000-508+Porto,+Portugal&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização Maria Bonita Botequim">
+        </iframe>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+ 
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
@@ -382,16 +393,17 @@
         <a href="mailto:mariabonitabotequim.porto@gmail.com" class="fsoc" title="Email">✉️</a>
       </div>
     </div>
-    <div class="f-col"><h5>Navegação</h5><a href="#sobre">Sobre Nós</a><a href="#cardapio">Cardápio</a><a href="#ambiente">Ambiente</a><a href="#reserva">Reservas</a></div>
+    <div class="f-col"><h5>Navegação</h5><a href="#sobre">Sobre Nós</a><a href="#cardapio">Cardápio</a><a href="#ambiente">Ambiente</a><a href="#reserva">Reservas</a><a href="#delivery">Delivery</a><a href="#localizacao">Localização</a></div>
     <div class="f-col"><h5>Contacto</h5><a href="tel:+351927928445">+351 927 928 445</a><a href="mailto:mariabonitabotequim.porto@gmail.com">mariabonitabotequim.porto@gmail.com</a><a href="https://instagram.com/mariabonita_botequim" target="_blank">@mariabonita_botequim</a></div>
-    <div class="f-col"><h5>Como Chegar</h5><p>Rua de Santo Ildefonso, 244</p><p>4000-508 Porto, Portugal</p><p>Baixa Portuense</p><a href="https://maps.google.com/?q=Rua+de+Santo+Ildefonso+244+Porto" target="_blank" style="color:var(--amarelo);margin-top:0.5rem">Ver no Google Maps →</a></div>
+    <div class="f-col"><h5>Como Chegar</h5><p>Rua de Santo Ildefonso, 244</p><p>4000-508 Porto, Portugal</p><p>Baixa Portuense</p><a href="https://maps.google.com/?q=Rua+de+Santo+Ildefonso+244+Porto" target="_blank" class="footer-maps">Ver no Google Maps →</a></div>
   </div>
-  <div class="footer-bottom" style="padding-left:5%;padding-right:5%">
+  <div class="footer-bottom">
     <p>© 2025 Maria Bonita Botequim · Porto, Portugal · Todos os direitos reservados</p>
     <p>Feito com 🇧🇷 e muito saudade</p>
   </div>
 </footer>
-
+ 
+<!-- Ficheiro JavaScript separado -->
 <script src="script.js"></script>
 </body>
 </html>
