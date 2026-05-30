@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Bonita Botequim — Porto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;700&family=Abril+Fatface&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#home" class="nav-logo">Maria Bonita</a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#cardapio">Cardápio</a></li>
+    <li><a href="#ambiente">Ambiente</a></li>
+    <li><a href="#reserva">Reservas</a></li>
+    <li><a href="#delivery">Delivery</a></li>
+  </ul>
+  <a href="#reserva" class="nav-cta">Reservar Mesa</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+  <a href="#cardapio" onclick="toggleMenu()">Cardápio</a>
+  <a href="#ambiente" onclick="toggleMenu()">Ambiente</a>
+  <a href="#reserva" onclick="toggleMenu()">Reservas</a>
+  <a href="#delivery" onclick="toggleMenu()">Delivery</a>
+  </div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-foto-bg"></div>
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-blob3"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-text">Porto, Portugal</span>
+        <span class="hero-flag">🇧🇷</span>
+      </div>
+      <!-- No mobile: título e foto lado a lado numa linha -->
+      <div class="hero-titulo-row">
+        <h1 class="hero-title">
+          Maria
+          <span>Bonita</span>
+        </h1>
+        <!-- Foto ao lado do título — só aparece no mobile -->
+        <div class="hero-foto-mobile">
+          <img src="Logo2.png" alt="Maria Bonita">
+        </div>
+      </div>
+
+      <p class="hero-botequim">Botequim Brasileiro</p>
+
+      <p class="hero-desc">
+        Seu bar brasileiro no Porto! Comida e petiscos, cerveja gelada,
+        música ao vivo e gente animada. Um pedaço da alma carioca no coração da Baixa Portuense.
+      </p>
+      <div class="hero-ctas">
+        <a href="#cardapio" class="btn-gold">🍽️ Ver Cardápio</a>
+        <a href="#reserva" class="btn-ghost">📅 Reservar Mesa</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hero-badge badge-yellow">⭐ 4.4 Google Maps</span>
+        <span class="hero-badge badge-red">🎵 Música ao Vivo</span>
+        <span class="hero-badge badge-green">🥘 Feijoada Todo Fim de Semana</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:1.2rem;text-align:center;">
+        <!-- FOTO -->
+        <img src="logo.png"
+             alt="Maria Bonita Botequim"
+             style="width:420px;max-width:90%;height:300px;object-fit:cover;object-position:center;">
+        <!-- ENDEREÇO -->
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);">
+          Rua de Santo Ildefonso · Porto
+        </div>
+        <!-- ESTRELAS -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
+          <div style="color:#f4a90a;font-size:0.85rem;letter-spacing:2px;">★★★★☆</div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;">4.4 · Centenas de avaliações</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-label="Destaques">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span>🎵</span> Roda de Samba toda Sexta-feira <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🥘</span> Feijoada Completa — Sábados e Domingos desde o almoço <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🍹</span> Caipirinha de Limão Tradicional · a embaixadora do botequim <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>📍</span> Rua de Santo Ildefonso 244 · Porto <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🎶</span> Forró e Baião — noites de pura boemia <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🍺</span> Chopp Viva bem gelado sempre disponível <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🎵</span> Roda de Samba toda Sexta-feira <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🥘</span> Feijoada Completa — Sábados e Domingos desde o almoço <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🍹</span> Caipirinha de Limão Tradicional · a embaixadora do botequim <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>📍</span> Rua de Santo Ildefonso 244 · Porto <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🎶</span> Forró e Baião — noites de pura boemia <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span>🍺</span> Chopp Viva bem gelado sempre disponível <span class="ticker-sep">✦</span></span>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-texto reveal">
+        <div class="sec-tag">Nossa História</div>
+        <h2 class="sec-title">Um pedaço do Brasil<br>no <em>coração do Porto</em></h2>
+        <p>O Maria Bonita nasceu do desejo genuíno de trazer a boemia carioca e a riqueza cultural brasileira para o centro histórico do Porto. Mais do que um restaurante, somos um ponto de encontro — aquele lugar que abraça você desde a primeira visita.</p>
+        <p>Aqui, a comunidade de brasileiros encontra um lar longe de casa, e os portuenses descobrem os sabores, os ritmos e a hospitalidade que só o Brasil sabe oferecer. Entre o samba que toca ao vivo, a caipirinha bem feita e o petisco saindo quentinho da cozinha, o tempo passa diferente no Maria Bonita.</p>
+        <p>Decoração vibrante com referências ao cangaço e à cultura popular — o nome é uma homenagem à lendária Maria Bonita — e uma atmosfera intimista que te convida a ficar mais uma rodada.</p>
+        <div class="sobre-detalhe">
+          <p>"<strong>Seu bar brasileiro no Porto!</strong> Comida e petiscos, cerveja gelada, música ao vivo e gente animada — desde o almoço de fim de semana até a madrugada boêmia."</p>
+        </div>
+        <div class="pills-row">
+          <span class="pill">🎵 Samba ao Vivo</span>
+          <span class="pill r">🌶️ Cultura do Cangaço</span>
+          <span class="pill o">🥘 Receitas Afetivas</span>
+          <span class="pill">🍺 Chope Gelado</span>
+          <span class="pill r">🇧🇷 Comunidade Brasileira</span>
+        </div>
+      </div>
+      <div class="sobre-cards reveal d2">
+        <div class="info-card dark"><div class="ic-icon">🕐</div><div class="ic-title">Horários</div><div class="ic-body">Qua–Qui: 12h–15h / 19h–00h<br>Sex: 12h–02h<br>Sáb–Dom: 12h–02h<br>Seg–Ter: Fechado</div></div>
+        <div class="info-card accent"><div class="ic-icon">📍</div><div class="ic-title">Localização</div><div class="ic-body">Rua de Santo Ildefonso, 244<br>4000-508 Porto<br>Baixa Portuense</div></div>
+        <div class="info-card gold"><div class="ic-icon">⭐</div><div class="ic-title">Avaliação Google</div><div class="ic-body">4.4 estrelas<br>Centenas de avaliações<br>Ambiente e animação elogiados</div></div>
+        <div class="info-card light"><div class="ic-icon">🎶</div><div class="ic-title">Música ao Vivo</div><div class="ic-body">Samba · Forró · Baião<br>MPB e muito mais<br>Agenda semanal intensa</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARDÁPIO -->
+<section class="cardapio" id="cardapio">
+  <div class="cardapio-bg"></div>
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-tag">Cardápio</div>
+      <h2 class="sec-title light">Sabores que <em>fazem você voltar</em></h2>
+    </div>
+    <div class="menu-tabs">
+      <button class="mtab on" onclick="showTab('petiscos',this)">Petiscos</button>
+      <button class="mtab" onclick="showTab('pratos',this)">Pratos</button>
+      <button class="mtab" onclick="showTab('sobremesas',this)">Sobremesas</button>
+      <button class="mtab" onclick="showTab('bebidas',this)">Bebidas</button>
+    </div>
+    <div class="msec on" id="petiscos">
+      <div class="menu-grid">
+        <div class="mitem"><span class="mbadge mb-hot">🔥 Mais Pedido</span><div class="mitem-header"><h3>Coxinha de Frango Tradicional</h3><span class="mprice">€ 6,50</span></div><p>Clássica coxinha com massa artesanal de batata ultra cremosa, recheada com frango desfiado temperado com ervas, frita na hora até dourar. Porção com 4 unidades.</p></div>
+        <div class="mitem"><span class="mbadge mb-hot">🔥 Destaque da Casa</span><div class="mitem-header"><h3>Bolinho de Feijoada</h3><span class="mprice">€ 7,50</span></div><p>Massa especial de feijoada de raiz, recheada com couve mineira refogada no alho e bacon defumado. Acompanha gomos de laranja frescas e pimenta da casa. 4 unidades.</p></div>
+        <div class="mitem"><div class="mitem-header"><h3>Pastéis de Vento Recheados</h3><span class="mprice">€ 6,00</span></div><p>Pastéis fritos na hora com massa crocante de feira. Escolha e misture: Carne moída com ovo, Queijo derretido ou Palmito cremoso. 3 unidades.</p></div>
+        <div class="mitem"><span class="mbadge mb-veg">🌿 Vegetariano</span><div class="mitem-header"><h3>Dadinhos de Tapioca</h3><span class="mprice">€ 6,80</span></div><p>Cubos dourados de tapioca granulada e queijo coalho, fritos e servidos com geleia de pimenta agridoce caseira irresistível. 6 unidades.</p></div>
+        <div class="mitem"><span class="mbadge mb-veg">🌿 Vegetariano</span><div class="mitem-header"><h3>Mandioca Frita Polvilhada</h3><span class="mprice">€ 5,50</span></div><p>Porção generosa de aipim cozido e frito, crocante por fora e macio por dentro, finalizado com queijo parmesão ralado fino.</p></div>
+        <div class="mitem"><span class="mbadge mb-new">✨ Especialidade</span><div class="mitem-header"><h3>Calabresa Acebolada na Cachaça</h3><span class="mprice">€ 8,50</span></div><p>Fatias de linguiça calabresa defumada salteadas com muita cebola e flambadas na cachaça artesanal brasileira. Acompanha pão para chuchar no molho.</p></div>
+      </div>
+    </div>
+    <div class="msec" id="pratos">
+      <div class="menu-grid">
+        <div class="mitem"><span class="mbadge mb-hot">🔥 O Prato da Casa</span><div class="mitem-header"><h3>Feijoada Completa à Maria Bonita</h3><span class="mprice">€ 14,50</span></div><p>O mais famoso! Feijão preto cozido lentamente com carnes nobres de porco e embutidos selecionados. Arroz branco, couve no alho, farofa crocante e fatias de laranja. Grande destaque dos fins de semana.</p></div>
+        <div class="mitem"><span class="mbadge mb-new">✨ Regional</span><div class="mitem-header"><h3>Baião de Dois Nordestino</h3><span class="mprice">€ 13,50</span></div><p>Combinação do sertão: arroz e feijão de corda cozidos juntos com queijo coalho grelhado, carne de sol desfiada, coentro fresco e manteiga de garrafa.</p></div>
+        <div class="mitem"><div class="mitem-header"><h3>Escondidinho de Carne de Sol</h3><span class="mprice">€ 12,80</span></div><p>Camada de carne de sol desfiada e refogada com temperos da casa, coberta por purê cremoso de mandioca legítima e gratinada com queijo derretido.</p></div>
+        <div class="mitem"><span class="mbadge mb-vegan">🌱 Vegan</span><div class="mitem-header"><h3>Moqueca de Banana da Terra</h3><span class="mprice">€ 12,50</span></div><p>Ensopado aromático em panela de barro com banana da terra, pimentões coloridos, cebola, leite de coco e azeite de dendê. Acompanha arroz e farofa de dendê.</p></div>
+      </div>
+    </div>
+    <div class="msec" id="sobremesas">
+      <div class="menu-grid">
+        <div class="mitem"><span class="mbadge mb-hot">🔥 Clássico</span><div class="mitem-header"><h3>Dupla de Brigadeiros Gourmet</h3><span class="mprice">€ 3,00</span></div><p>Dois brigadeiros boleados na hora com leite condensado premium, chocolate belga e granulado nobre. O autêntico sabor das festas brasileiras.</p></div>
+        <div class="mitem"><span class="mbadge mb-hot">🔥 Favorito</span><div class="mitem-header"><h3>Pudim de Leite Condensado</h3><span class="mprice">€ 4,00</span></div><p>O clássico caseiro, liso e cremoso, servido bem gelado com calda de caramelo dourada brilhante.</p></div>
+        <div class="mitem"><span class="mbadge mb-new">✨ Especial</span><div class="mitem-header"><h3>Romeu e Julieta na Taça</h3><span class="mprice">€ 4,50</span></div><p>Releitura moderna com camadas de creme de queijo fresco aerado e redução artesanal de goiabada cascão cremosa importada do Brasil.</p></div>
+        <div class="mitem"><div class="mitem-header"><h3>Bolo de Cenoura com Chocolate</h3><span class="mprice">€ 3,80</span></div><p>Fatia de bolo fofinho ao estilo brasileiro, coberto com calda de chocolate que forma aquela casquinha firme ao esfriar.</p></div>
+      </div>
+    </div>
+    <div class="msec" id="bebidas">
+      <div class="menu-grid">
+        <div class="mitem"><span class="mbadge mb-hot">🔥 Embaixadora</span><div class="mitem-header"><h3>Caipirinha Tradicional de Limão</h3><span class="mprice">€ 6,00</span></div><p>A clássica: cachaça brasileira de qualidade, limão fresco macerado na hora, açúcar e muito gelo picado. Unanimidade entre os frequentadores.</p></div>
+        <div class="mitem"><span class="mbadge mb-new">✨ Tropical</span><div class="mitem-header"><h3>Caipirosca de Frutas Tropicais</h3><span class="mprice">€ 7,00</span></div><p>Com Vodka premium. Sabores sazonais: Maracujá fresco com sementes, Morango ou Manga. Suave e irresistível.</p></div>
+        <div class="mitem"><span class="mbadge mb-hot">🔥 Clássico</span><div class="mitem-header"><h3>Chopp / Imperial Viva (30cl)</h3><span class="mprice">€ 2,20</span></div><p>Cerveja de pressão clara tirada na temperatura perfeita, com colarinho cremoso. O companheiro ideal das noites de samba.</p></div>
+        <div class="mitem"><span class="mbadge mb-new">🇧🇷 Original</span><div class="mitem-header"><h3>Guaraná Antarctica (Lata)</h3><span class="mprice">€ 2,50</span></div><p>O autêntico refrigerante de fruta da Amazônia brasileira, trincando de gelado com rodela de limão.</p></div>
+        <div class="mitem"><span class="mbadge mb-veg">🌿 Natural</span><div class="mitem-header"><h3>Suco de Polpa Brasileira</h3><span class="mprice">€ 3,50</span></div><p>Batido na hora com água ou leite. Sabores: Caju, Acerola rica em vitamina C ou Maracujá concentrado.</p></div>
+      </div>
+    <p style="font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:1.5rem;font-style:italic;">* Preços podem sofrer pequenas variações em plataformas de delivery externo ou atualizações sazonais.</p>
+  </div>
+</section>
+
+<!-- AMBIENTE -->
+<section class="ambiente" id="ambiente">
+  <div class="container">
+    <div class="amb-intro">
+      <div class="reveal"><div class="sec-tag">Nosso Espaço</div><h2 class="sec-title">Um ambiente que<br><em>te abraça</em></h2></div>
+      <p class="amb-desc reveal d1">Decoração colorida, vibrante e tropical com referências ao cangaço e à cultura popular brasileira. Iluminação quente e intimista, mesas de madeira que estimulam a confraternização e um palco integrado ao salão para as apresentações de música ao vivo.</p>
+    </div>
+    <div class="amb-grid">
+      <div class="amb-card tall reveal"><div class="amb-bg bg1"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:4rem;opacity:0.2">🎵</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Salão Principal</h4><p>Palco de música integrado · Ambiente boêmio</p></div></div>
+      <div class="amb-card reveal d1"><div class="amb-bg bg2" style="height:220px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2">🍹</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Bar e Balcão</h4><p>Caipirinhas e chopes sempre gelados</p></div></div>
+      <div class="amb-card reveal d2"><div class="amb-bg bg3" style="height:220px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2">🌶️</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Decoração Cangaço</h4><p>Arte popular e referências culturais</p></div></div>
+      <div class="amb-card reveal d1"><div class="amb-bg bg4" style="height:220px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2">🥘</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Área de Feijoada</h4><p>Fins de semana com feijoada completa</p></div></div>
+      <div class="amb-card wide reveal d2"><div class="amb-bg bg5" style="height:220px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:4rem;opacity:0.2">🎉</div></div><div class="amb-overlay"></div><div class="amb-info"><h4>Espaço para Eventos e Aniversários</h4><p>Reserve para grupos · Festas temáticas · Carnaval · São João · Réveillon</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depos" id="depoimentos">
+  <div class="container">
+    <div class="dep-intro">
+      <div class="reveal"><div class="sec-tag">O Que Dizem</div><h2 class="sec-title light">Feito com amor,<br><em>sentido na memória</em></h2></div>
+      <div class="dep-rating reveal d1"><div class="dep-rating-num">4.4</div><div class="dep-rating-stars">★★★★☆</div><div class="dep-rating-label">Centenas de avaliações · Google Maps</div></div>
+    </div>
+    <div class="dep-grid">
+      <div class="dep-card reveal"><div class="dep-stars">★★★★★</div><p class="dep-txt">"Para quem está com saudades do Brasil, é o melhor lugar no Porto. A feijoada de sábado é deliciosa, vem super completa e a caipirinha de limão é perfeita. O ambiente com samba ao vivo deixa tudo ainda melhor!"</p><div class="dep-autor"><div class="dep-av">JM</div><div><div class="dep-nome">Juliana M.</div><div class="dep-plat">Google Maps</div></div></div></div>
+      <div class="dep-card reveal d1"><div class="dep-stars">★★★★★</div><p class="dep-txt">"Fui com amigos portugueses e todos adoraram. Os petiscos são maravilhosos, com destaque para a coxinha e os bolinhos. Atendimento muito simpático e atencioso por parte do staff."</p><div class="dep-autor"><div class="dep-av">RS</div><div><div class="dep-nome">Ricardo S.</div><div class="dep-plat">Google Maps</div></div></div></div>
+      <div class="dep-card reveal d2"><div class="dep-stars">★★★★★</div><p class="dep-txt">"Ambiente super gostoso, música boa e atendimento nota 10. Um verdadeiro botequim carioca na Baixa do Porto. Excelente para comemorar aniversário ou curtir um forró na noite."</p><div class="dep-autor"><div class="dep-av">LF</div><div><div class="dep-nome">Lucas F.</div><div class="dep-plat">Google Maps</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVA -->
+<section class="reserva" id="reserva">
+  <div class="container">
+    <div class="reserva-grid">
+      <div class="reserva-info reveal">
+        <div class="sec-tag">Reservas & Contato</div>
+        <h2 class="sec-title">Garanta seu <em>lugar</em></h2>
+        <p>Reserve a sua mesa com antecedência, especialmente para a Feijoada dos fins de semana e noites de música ao vivo. Para grupos ou eventos especiais, fale diretamente connosco.</p>
+        <div class="contato-links">
+          <a href="tel:+351927928445" class="cont-link"><div class="cont-icon">📞</div>+351 927 928 445 (Telefone / WhatsApp)</a>
+          <a href="mailto:mariabonitabotequim.porto@gmail.com" class="cont-link"><div class="cont-icon">✉️</div>mariabonitabotequim.porto@gmail.com</a>
+          <a href="https://maps.google.com/?q=Rua+de+Santo+Ildefonso+244+Porto" target="_blank" class="cont-link"><div class="cont-icon">📍</div>Rua de Santo Ildefonso, 244 · 4000-508 Porto</a>
+          <a href="https://instagram.com/mariabonita_botequim" target="_blank" class="cont-link"><div class="cont-icon">📸</div>@mariabonita_botequim</a>
+        </div>
+        <div class="horario-table">
+          <div class="ht-row"><span class="ht-dia">Segunda</span><span class="ht-fechado">Fechado</span></div>
+          <div class="ht-row"><span class="ht-dia">Terça</span><span class="ht-fechado">Fechado</span></div>
+          <div class="ht-row"><span class="ht-dia">Quarta</span><span class="ht-hora">12h00–15h00 · 19h00–00h00</span></div>
+          <div class="ht-row"><span class="ht-dia">Quinta</span><span class="ht-hora">12h00–15h00 · 19h00–00h00</span></div>
+          <div class="ht-row"><span class="ht-dia">Sexta</span><span class="ht-hora" style="color:var(--vermelho);font-weight:700">12h00–02h00 🎵</span></div>
+          <div class="ht-row"><span class="ht-dia">Sábado</span><span class="ht-hora" style="color:var(--verde);font-weight:700">12h00–02h00 🥘</span></div>
+          <div class="ht-row"><span class="ht-dia">Domingo</span><span class="ht-hora">12h00–02h00</span></div>
+        </div>
+        <p class="ht-nota">🎵 Noite boêmia · 🥘 Feijoada desde o almoço · Reserve com antecedência nos fins de semana</p>
+      </div>
+
+      <!-- ═══ FORMULÁRIO COM WHATSAPP ═══
+           Cada campo tem um id único (f-nome, f-tel, etc.)
+           O JavaScript lê esses ids para montar a mensagem -->
+      <div class="reserva-form reveal d1">
+        <div class="rf-title">Reservar Mesa</div>
+        <p class="rf-sub">Ao enviar, abrimos o WhatsApp com os seus dados já preenchidos.</p>
+
+        <div class="fg">
+          <label>Nome completo</label>
+          <input id="f-nome" type="text" placeholder="O seu nome">
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label>Telefone / WhatsApp</label>
+            <input id="f-tel" type="tel" placeholder="+351 000 000 000">
+          </div>
+          <div class="fg">
+            <label>E-mail</label>
+            <input id="f-email" type="email" placeholder="seu@email.com">
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label>Data</label>
+            <input id="f-data" type="date">
+          </div>
+          <div class="fg">
+            <label>Horário</label>
+            <select id="f-hora">
+              <option>12h00 (Almoço)</option>
+              <option>13h00</option>
+              <option>14h00</option>
+              <option>19h00</option>
+              <option>20h00</option>
+              <option>21h00</option>
+              <option>22h00</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Número de pessoas</label>
+          <select id="f-pessoas">
+            <option>1–2 pessoas</option>
+            <option>3–4 pessoas</option>
+            <option>5–6 pessoas</option>
+            <option>7–10 pessoas</option>
+            <option>Mais de 10 (evento / aniversário)</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Ocasião especial?</label>
+          <input id="f-ocasiao" type="text" placeholder="Aniversário, evento corporativo... (opcional)">
+        </div>
+        <div class="fg">
+          <label>Observações</label>
+          <textarea id="f-obs" placeholder="Alergias, preferências ou pedidos especiais..."></textarea>
+        </div>
+        <button class="btn-submit" id="submitBtn" onclick="handleSubmit()">
+          💬 Enviar via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="delivery" id="delivery">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-tag">Delivery</div>
+      <h2 class="sec-title light">Peça em <em>casa</em></h2>
+    </div>
+    <p class="delivery-desc reveal">
+      Não consegues vir até nós? Tudo bem — levamos o sabor do Maria Bonita até à tua porta! 
+      Escolhe a tua plataforma favorita e faz o teu pedido agora.
+    </p>
+    <div class="delivery-cards">
+
+      <!-- UBER EATS -->
+      <a class="dlv-card dlv-uber reveal"
+         href="https://www.ubereats.com/store/maria-bonita-botequim/L1rHTmhaRGGVQzI5jn0BQQ?diningMode=DELIVERY"
+         target="_blank" rel="noopener">
+        <div class="dlv-badge">Disponível agora</div>
+        <div class="dlv-logo">Uber Eats</div>
+        <p class="dlv-desc">Entrega rápida e rastreável em tempo real directo à tua porta</p>
+        <span class="dlv-btn">Pedir no Uber Eats</span>
+      </a>
+
+      <!-- BOLT FOOD -->
+      <a class="dlv-card dlv-bolt reveal d1"
+         href="https://food.bolt.eu/en-US/437/p/116768-maria-bonita-botequim"
+         target="_blank" rel="noopener">
+        <div class="dlv-badge">Disponível agora</div>
+        <div class="dlv-logo">Bolt Food</div>
+        <p class="dlv-desc">Entrega acessível e rápida com as melhores promoções da cidade</p>
+        <span class="dlv-btn">Pedir no Bolt Food</span>
+      </a>
+
+      <!-- GLOVO -->
+      <a class="dlv-card dlv-glovo reveal d2"
+         href="https://ufv9.adj.st/?adjust_deeplink=glovoapp%3A%2F%2Fopen%3Flink_type%3Dstore%26store_id%3D531650&adjust_t=s321jkn"
+         target="_blank" rel="noopener">
+        <div class="dlv-badge">Disponível agora</div>
+        <div class="dlv-logo">Glovo</div>
+        <p class="dlv-desc">Entrega expressa com rastreamento em directo no teu telemóvel</p>
+        <span class="dlv-btn">Pedir no Glovo</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="f-logo">Maria Bonita</span>
+      <p>Um pedaço autêntico da boemia carioca e da cultura brasileira no coração do Porto. Samba, petiscos, caipirinha e gente boa.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/mariabonita_botequim" target="_blank" class="fsoc" title="Instagram">📸</a>
+        <a href="https://wa.me/351927928445" target="_blank" class="fsoc" title="WhatsApp">💬</a>
+        <a href="mailto:mariabonitabotequim.porto@gmail.com" class="fsoc" title="Email">✉️</a>
+      </div>
+    </div>
+    <div class="f-col"><h5>Navegação</h5><a href="#sobre">Sobre Nós</a><a href="#cardapio">Cardápio</a><a href="#ambiente">Ambiente</a><a href="#reserva">Reservas</a></div>
+    <div class="f-col"><h5>Contacto</h5><a href="tel:+351927928445">+351 927 928 445</a><a href="mailto:mariabonitabotequim.porto@gmail.com">mariabonitabotequim.porto@gmail.com</a><a href="https://instagram.com/mariabonita_botequim" target="_blank">@mariabonita_botequim</a></div>
+    <div class="f-col"><h5>Como Chegar</h5><p>Rua de Santo Ildefonso, 244</p><p>4000-508 Porto, Portugal</p><p>Baixa Portuense</p><a href="https://maps.google.com/?q=Rua+de+Santo+Ildefonso+244+Porto" target="_blank" style="color:var(--amarelo);margin-top:0.5rem">Ver no Google Maps →</a></div>
+  </div>
+  <div class="footer-bottom" style="padding-left:5%;padding-right:5%">
+    <p>© 2025 Maria Bonita Botequim · Porto, Portugal · Todos os direitos reservados</p>
+    <p>Feito com 🇧🇷 e muito saudade</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
